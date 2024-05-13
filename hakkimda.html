@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İrem Güzel kişisel websitesi</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="hakkimda.html" class="active">Hakkımda</a>
+  <a href="ozgecmis.html">Özgeçmiş</a>
+  <a href="ilgi.html">İlgi Alanlarım</a>
+  <div class="dropdown">
+    <button class="dropbtn">Şehrim 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Tarihi</a>
+      <a href="#">Turizm Değerleri</a>
+      <a href="eses.html">Mirasımız Eskişehirspor</a>
+    </div>
+  </div>
+  <a href="iletisim.html" style="float: right;">İletişim</a>
+  <a href="giris.html" style="float: right;">Giriş Yap</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div style="padding-left:16px">
+  content
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += "responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
