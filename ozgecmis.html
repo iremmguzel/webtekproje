@@ -1,11 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>İrem Güzel CV</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        body {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            color: #5a5a5a;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+
+        .navbar {
+            font-size: 1.25rem;
+        }
+
+        .dropdown-item {
+            color: #ffffff;
+            font-size: 1.25rem;
+        }
+
+        .dropdown-menu {
+            background-color: #343a40;
+            border-radius: 0;
+        }
+
+        .carousel {
+            margin-bottom: 4rem;
+        }
+
+        .carousel-caption {
+            bottom: 3rem;
+            z-index: 10;
+        }
+
+        .carousel-item {
+            height: 32rem;
+        }
+
+        .carousel-item>img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            height: 32rem;
+        }
+
+        .marketing .col-lg-4 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .marketing h2 {
+            font-weight: 400;
+        }
+
+        .marketing .col-lg-4 p {
+            margin-right: .75rem;
+            margin-left: .75rem;
+        }
+
+        .featurette-divider {
+            margin: 5rem 0;
+        }
+
+        .featurette-heading {
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: -.05rem;
+        }
+
+        @media (min-width: 40em) {
+
+            .carousel-caption p {
+                margin-bottom: 1.25rem;
+                font-size: 1.25rem;
+                line-height: 1.4;
+            }
+
+            .featurette-heading {
+                font-size: 50px;
+            }
+        }
+
+        @media (min-width: 62em) {
+            .featurette-heading {
+                margin-top: 7rem;
+            }
+        }
+
+        /**** cv için additon css ***/
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f8f9fa;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .resume-section {
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        .profile-pic {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+        }
+
+        .name {
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            color: #343a40;
+            border-bottom: 2px solid #343a40;
+            display: inline-block;
+        }
+
+        .content-section {
+            margin-bottom: 20px;
+        }
+
+        .contact-info,
+        .content-section {
+            text-align: left;
+        }
+
+        .left-section {
+            padding: 20px;
+        }
+
+        .right-section {
+            padding: 40px 20px;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 1100px;
+            padding: 0 30px;
+        }
+
+        /************************/
+    </style>
+
 </head>
+
 <body>
-    Bu bir özgeçmiştir
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="hakkimda.html">Hakkımda</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Özgeçmiş</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">İlgi Alanlarım</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="sehrim.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Şehrim
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Tarihi</a></li>
+                            <li><a class="dropdown-item" href="#">Turizm</a></li>
+                            <li><a class="dropdown-item" href="eses.html">Mirasımız Eskişehirspor</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Giriş Yap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row h-100">
+            <div class="col-lg-3 bg-light d-flex flex-column align-items-start justify-content-center left-section">
+                <div class="w-100 text-center">
+                    <img src="images/cv.jpg" alt="Profile Picture" class="profile-pic mb-4">
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i>iremguzel74@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i>Eskişehir, Türkiye</p>
+                    <p><i class="fas fa-phone"></i>+90 550 175 26 26</p>
+                    <p><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/irem-güzel/"
+                            target="_blank">linkedin.com/in/irem-güzel/</a></p>
+                </div>
+            </div>
+            <div class="col-lg-9 bg-white right-section">
+                <div class="content-section">
+                    <h1 class="name">İrem Güzel</h1>
+                </div>
+                <div class="content-section">
+                    <h2 class="section-title">Hakkımda</h2>
+                    <p><i>Sakarya Üniversitesi Bilgisayar Mühendisliği 1.sınıf öğrencisiyim. Yazılım geliştirme üzerine
+                            uzmanlaşmak istiyorum. Ayrıca veri bilimi, yapay zeka, siber güvenlik ilgi alanlarım
+                            arasında.</i>
+                    </p>
+                </div>
+                <div class="content-section">
+                    <h2 class="section-title">Eğitim</h2>
+                    <p><i>Lisans: </i> Sakarya Üniversitesi Bilgisayar Mühendisliği</p>
+                    <p><i>Lise: </i>TED Eskişehir Özel Anadolu Lisesi (2020)</p>
+                </div>
+                <div class="content-section">
+                    <h2 class="section-title">Diller</h2>
+                    <ul>
+                        <li><i>İngilizce </i><b>B2</b></li>
+                        <li><i>Almanca </i><b>A1</b></li>
+                    </ul>
+                </div>
+                <div class="content-section">
+                    <h2 class="section-title">Sertifikalar</h2>
+                    <ul>
+                        <li><i>MSMB Mühendishane Mesleki Kariyer Tamamlama Programı</i></li>
+                        <li><i>The Duke of Edinburgh's International Award Bronz Kategori</i></li>
+                        <li><i>Anadolu Üniversitesi Üstün Yetenekliler Programı</i></li>
+                    </ul>
+                </div>
+                <div class="content-section">
+                    <h2 class="section-title">Beceriler</h2>
+                    <ul>
+                        <li><i>C#</i></li>
+                        <li><i>Temel seviyede web programlama</i></li>
+                        <li><i>Analitik</i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
