@@ -1,11 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>İletişim</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      padding-top: 5rem;
+      padding-bottom: 3rem;
+      color: #5a5a5a;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+
+    .navbar {
+      font-size: 1.25rem;
+    }
+
+    .dropdown-item {
+      color: #ffffff;
+      font-size: 1.25rem;
+    }
+
+    .dropdown-menu {
+      background-color: #343a40;
+      border-radius: 0;
+    }
+
+    @media (min-width: 40em) {
+      .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+      }
+
+      .featurette-heading {
+        font-size: 50px;
+      }
+    }
+
+    @media (min-width: 62em) {
+      .featurette-heading {
+        margin-top: 7rem;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-check-input {
+      margin-right: 0.5rem;
+    }
+
+    .form-check-label {
+      margin-right: 1.5rem;
+    }
+
+    button[type="reset"],
+    button[type="submit"] {
+      margin-right: 1rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      background-color: #f8f9fa;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-weight: 600;
+      color: #343a40;
+    }
+
+    label {
+      font-weight: 500;
+    }
+
+    .form-group.radio-group {
+      margin-top: 0.5rem;
+    }
+
+    .subject {
+      margin-bottom: 0;
+    }
+  </style>
+
 </head>
+
 <body>
-    
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="hakkimda.html">Hakkımda</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Özgeçmiş</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">İlgi Alanlarım</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Şehrim
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Tarihi</a></li>
+                <li><a class="dropdown-item" href="#">Turizm</a></li>
+                <li><a class="dropdown-item" href="#">Mirasımız Eskişehirspor</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Giriş Yap</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">İletişim</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <form>
+        <div class="form-group col-md-12">
+          <h2>İletişim</h2> <br>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="fname" class="form-label">İsminiz</label>
+          <input type="text" class="form-control" placeholder="İsminiz" aria-label="First name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lname" class="form-label">Soyisminiz</label>
+          <input type="text" class="form-control" placeholder="Soyisminiz" aria-label="Last name">
+        </div>
+        <div class="form-group col-md-12">
+          <label for="exampleFormControlInput1" class="form-label">E-mail adresiniz</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="form-group col-md-12">
+          <label for="fname" class="form-label subject">İletinin konusu</label>
+        </div>
+        <div class="form-group col-md-12 radio-group">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <label class="form-check-label" for="flexRadioDefault2">
+            Talep
+          </label>
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Öneri
+          </label>
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Şikayet
+          </label>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="exampleFormControlTextarea1" class="form-label">Mesajınız</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="form-group col-md-12">
+          <button type="reset" class="btn btn-primary">Temizle</button>
+          <button type="submit" class="btn btn-primary">Gönder</button>
+        </div>
+      </form>
+    </div>
+
+    <hr class="featurette-divider">
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+
 </body>
+
 </html>
