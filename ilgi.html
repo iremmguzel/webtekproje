@@ -1,160 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kişisel websitesi</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Film Uygulaması</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <style>
-        body { margin: 0; font-family: Arial; }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
-        .topnav {
-            overflow: hidden;
-            background-color: #333;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-        .topnav a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
+    <link rel="stylesheet" href="css/style.css">
 
-        .active {
-            background-color: #04AA6D;
-            color: white;
-        }
-
-        .topnav .icon {
-            display: none;
-        }
-
-        .topnav .right {
-            float: right;
-        }
-
-        .dropdown {
-            float: left;
-            overflow: hidden;
-        }
-
-        .dropdown .dropbtn {
-            font-size: 17px;
-            border: none;
-            outline: none;
-            color: white;
-            padding: 14px 16px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .topnav a:hover, .dropdown:hover .dropbtn {
-            background-color: #555;
-            color: white;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        @media screen and (max-width: 600px) {
-            .topnav a:not(:first-child), .dropdown .dropbtn {
-                display: none;
-            }
-            .topnav a.icon {
-                float: right;
-                display: block;
-            }
-            .topnav.responsive { position: relative; }
-            .topnav.responsive .icon {
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
-            .topnav.responsive a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-            .topnav.responsive .dropdown { float: none; }
-            .topnav.responsive .dropdown-content { position: relative; }
-            .topnav.responsive .dropdown .dropbtn {
-                display: block;
-                width: 100%;
-                text-align: left;
-            }
-        }
-    </style>
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="hakkimda.html">Hakkımda</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="ozgecmis.html">Özgeçmiş</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ilgi.html">İlgi Alanlarım</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="sehrim.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Şehrim
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Turizm</a></li>
+                            <li><a class="dropdown-item" href="eses.html">Mirasımız Eskişehirspor</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
-<div class="topnav" id="myTopnav">
-    <a href="hakkimda.html" class="active">Hakkımda</a>
-    <a href="ozgecmis.html">Özgeçmiş</a>
-    <a href="ilgi.html">İlgi Alanlarım</a>
-    
-    <div class="dropdown">
-      <button class="dropbtn">Şehrim 
-        <i class="bi bi-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-          <a href="#">Tarihi</a>
-          <a href="#">Turizm</a>
-          <a href="#">Mirasımız Eskişehirspor</a>
-      </div>
-  </div>
+                <ul class="navbar-nav mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="giris.html">Giriş Yap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <a href="iletisim.html" class="right">İletişim</a>
-    <a href="giris.html" class="right">Giriş Yap</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
+    <div class="container">
+        <div class="header">
+            <form id="form">
+                <input type="text" id="searchInput" placeholder="Film arayınız...">
+            </form>
+        </div>
 
-<div style="padding-left:16px">
-    content
-</div>
+        <div class="movies">
+            <div class="movie">
+                <img class="moviePicture" width="230" height="350"
+                    src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/rTk5Z0mQtA6N62rmkNvhYle2xZU.jpg" alt="">
+                <div class="info">
+                    <h4 class="movieName">Kader</h4>
+                    <h5 class="imbdPoint">8</h5>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<script>
-     function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-</script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>
