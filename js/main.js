@@ -1,5 +1,5 @@
 const form = document.querySelector("#form");
-const searchInput=document.querySelector("#searchInput");
+const searchInput = document.querySelector("#searchInput");
 
 const movieApi = new MovieAPI();
 runEventListeners();
