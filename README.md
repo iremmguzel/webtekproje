@@ -29,4 +29,4 @@ Kullanıcının kullanıcı adı ve şifre bilgileri ile **giriş** yapabileceğ
 
 Kullanıcıdan gelen girdilerin geçerli formatta olup olmadığının ve şifrenin doğru olup olmadığının **kontrol**ünü sağlayacağım.
 
-Bir **JavaScript framework**'ü kullanarak form elemsanları içeren bir iletişim sayfası oluşturacağım.
+Bir **JavaScript framework**'ü kullanarak form elemanları içeren bir iletişim sayfası oluşturacağım.
