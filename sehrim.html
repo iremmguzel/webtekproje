@@ -1,88 +1,58 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="tr">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Carousel Template · Bootstrap v5.0</title>
+    <title>Memleketim Eskişehir</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
-
-    <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
-        /* GLOBAL STYLES
--------------------------------------------------- */
-        /* Padding below the footer and lighter body text */
-
         body {
             padding-top: 3rem;
             padding-bottom: 3rem;
-            color: #5a5a5a;
+            color: #fafafa;
+            background-color: rgb(9, 2, 2);
+            font-family: "Poppins", sans-serif;
         }
 
-        /* navbar     */
+        /* navbar */
         .dropdown:hover .dropdown-menu {
             display: block;
             margin-top: 0;
-            /* remove the gap so it doesn't close */
         }
 
         .navbar {
             font-size: 1.25rem;
-            /* Örnek olarak font boyutunu 1.25 rem olarak ayarladık */
+            color: #fafafa;
+            background-color: #2a2d30;
         }
 
-        /* Dropdown öğelerini büyütme */
         .dropdown-item {
             color: #ffffff;
-            /* Beyaz renkte metin */
             font-size: 1.25rem;
-            /* Örnek olarak font boyutunu 1.25 rem olarak ayarladık */
         }
 
-        /* Dropdown menüsünün arka plan rengini koyu yapma */
         .dropdown-menu {
             background-color: #343a40;
-            /* Koyu arka plan rengi için örnek bir renk kullandık */
             border-radius: 0;
-            /* Köşeleri keskin yapar */
-
         }
 
-
-        /* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-        /* Carousel base class */
         .carousel {
-            margin-bottom: 4rem;
+            margin-top: 4rem;
         }
 
-        /* Since positioning the image, we need to help out the caption */
         .carousel-caption {
             bottom: 3rem;
             z-index: 10;
         }
 
-        /* Declare heights because of positioning of img element */
         .carousel-item {
             height: 32rem;
         }
@@ -95,11 +65,15 @@
             height: 32rem;
         }
 
+        .carousel-item img {
+            object-fit: cover;
+            /* İmajların carousel içinde genişlemesini sağlar */
+            height: 100%;
+            /* Carousel container'ının yüksekliğini doldurur */
+            width: 100%;
+            /* Carousel container'ının genişliğini doldurur */
+        }
 
-        /* MARKETING CONTENT
--------------------------------------------------- */
-
-        /* Center align the text within the three columns below the carousel */
         .marketing .col-lg-4 {
             margin-bottom: 1.5rem;
             text-align: center;
@@ -109,38 +83,32 @@
             font-weight: 400;
         }
 
-        /* rtl:begin:ignore */
         .marketing .col-lg-4 p {
             margin-right: .75rem;
             margin-left: .75rem;
         }
 
-        /* rtl:end:ignore */
-
-
-        /* Featurettes
-------------------------- */
-
         .featurette-divider {
-            margin: 5rem 0;
-            /* Space out the Bootstrap <hr> more */
+            margin: 3rem;
         }
 
-        /* Thin out the marketing headings */
         .featurette-heading {
             font-weight: 300;
             line-height: 1;
-            /* rtl:remove */
             letter-spacing: -.05rem;
         }
 
+        .ilkler {
+            font-size: 1.25rem;
+        }
 
-        /* RESPONSIVE CSS
--------------------------------------------------- */
+        .quote {
+            text-align: center;
+            font-style: italic;
+        }
 
         @media (min-width: 40em) {
 
-            /* Bump up size of carousel content */
             .carousel-caption p {
                 margin-bottom: 1.25rem;
                 font-size: 1.25rem;
@@ -154,20 +122,17 @@
 
         @media (min-width: 62em) {
             .featurette-heading {
-                margin-top: 7rem;
+                margin-top: 3rem;
             }
         }
     </style>
 
-
-    <!-- Custom styles for this template -->
 </head>
 
 <body>
-
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <div class="container-fluid">
+            <div class="container">
                 <a class="navbar-brand" href="hakkimda.html">Hakkımda</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -176,30 +141,29 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Özgeçmiş</a>
+                            <a class="nav-link" aria-current="page" href="ozgecmis.html">Özgeçmiş</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">İlgi Alanlarım</a>
+                            <a class="nav-link" href="ilgi.html">İlgi Alanlarım</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link active dropdown-toggle" href="sehrim.html" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Şehrim
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Tarihi</a></li>
-                                <li><a class="dropdown-item" href="#">Turizm</a></li>
-                                <li><a class="dropdown-item" href="#">Mirasımız Eskişehirspor</a></li>
+                                <li><a class="dropdown-item" href="sehrim.html">Memleketim Eskişehir</a></li>
+                                <li><a class="dropdown-item" href="eses.html">Mirasımız Eskişehirspor</a></li>
                             </ul>
                         </li>
                     </ul>
 
                     <ul class="navbar-nav mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Giriş Yap</a>
+                            <a class="nav-link" href="giris.php">Giriş Yap</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">İletişim</a>
+                            <a class="nav-link" href="iletisim.html">İletişim</a>
                         </li>
                     </ul>
                 </div>
@@ -209,172 +173,128 @@
 
     <main>
 
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div class="container">
+            <div id="myCarousel" class="container carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0"
+                        aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="https://www.eskisehir.bel.tr/eskisehir-turu">
+                            <img src="images/es2.jpg" class="d-block w-100" alt="First slide">
+                        </a>
+
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Eskişehir</h1>
+                                <p>"Şehir Eskişehir'dir."</p>
+                                <p>
+                                    <a class="btn btn-lg btn-primary"
+                                        href="https://www.eskisehir.bel.tr/eskisehir-turu">Daha
+                                        fazla bilgi için</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.eskisehir.bel.tr/sayfalar.php?sayfalar_id=70">
+                            <img src="images/odunpazari.jpg" class="d-block w-100" alt="First slide">
+                        </a>
+
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Odunpazarı Evleri</h1>
+                                <p>Rengarenk tarihi evlerin arasında şehrin canlı havasını hissedeceksiniz.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.sararhotels.com/eskisehir/7/porsuk">
+                            <img src="images/porsuk.jpg" class="d-block w-100" alt="First slide">
+                        </a>
+
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Porsuk Çayı</h1>
+                                <p>Her mevsim ayrı güzel</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <a href="http://masalsatosu.com">
+                            <img src="images/es4.jpg" class="d-block w-100" alt="First slide">
+                        </a>
+
+                        <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>Sazova Parkı</h1>
+                                <p>Şehre yeni bir yüz kazandıran, oldukça güzel fotoğraflar çekinebileceğiniz Masal
+                                    Şatosu...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/es2.jpg" class="d-block w-100" alt="First slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Eskişehir</h1>
-                            <p>"Şehir Eskişehir'dir."</p>
-                            <p><a class="btn btn-lg btn-primary" href="https://www.eskisehir.bel.tr/eskisehir-turu">Daha fazla bilgi için</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/es3.jpg" class="d-block w-100" alt="First slide">
-
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Odunpazarı Evleri</h1>
-                            <p>Rengarenk tarihi evlerin arasında şehrin canlı havasını hissedeceksiniz.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/es3.jpg" class="d-block w-100" alt="First slide">
-
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Porsuk Çayı</h1>
-                            <p>Her mevsim ayrı güzel</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/es4.jpg" class="d-block w-100" alt="First slide">
-
-                    <div class="container">
-                        <div class="carousel-caption text-end">
-                            <h1>Sazova Parkı</h1>
-                            <p>Şehre yeni bir yüz kazandıran, oldukça güzel fotoğraflar çekinebileceğiniz Masal Şatosu...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
-
-        <!-- Marketing messaging and featurettes
-  ================================================== -->
-        <!-- Wrap the rest of the page in another container to center all the content. -->
-
-        <div class="container marketing">
-
-            <!-- Three columns of text below the carousel -->
-            <div class="row">
-                <div class="col-lg-4">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                            dy=".3em">140x140</text>
-                    </svg>
-
-                    <h2>Tarihi</h2>
-                    <p>Kurtuluş Savaşı'na ve Milli Mücadele'ye tanıklık etmiş büyükşehir.</p>
-                    <p><a class="btn btn-secondary" href="#">Daha fazlası &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                            dy=".3em">140x140</text>
-                    </svg>
-
-                    <h2>Turizm</h2>
-                    <p>Eskişehir'i 2023 yılında 1 milyon 200 bine yakın turist ziyaret etti.</p>
-                    <p><a class="btn btn-secondary" href="#">Daha fazlası &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                            dy=".3em">140x140</text>
-                    </svg>
-
-                    <h2>Mirasımız Eskişehirspor</h2>
-                    <p>Nice yüreklerin adandığı, "Sahipsiz Eskişehir"in Eskişehirspor'u...</p>
-                    <p><a class="btn btn-secondary" href="#">Daha fazlası &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-            </div><!-- /.row -->
-
-
-            <!-- START THE FEATURETTES -->
 
             <hr class="featurette-divider">
 
             <div class="row featurette">
                 <div class="col-md-7">
-                    <h2 class="featurette-heading">Eskişehir<br>
-                        <span class="text-muted">İlkler şehri</span>
-                    </h2>
-                    <p class="lead">Canlı, enerjik ama huzurlu atmosferi, çoğunluğunu üniversite öğrencilerinin ve
+                    <h2 class="featurette-heading">Eskişehir<br></h2>
+                    <p class="lead">Canlı, enerjik ama güvenliliğinden ve yeşil doğasından gelen huzurlu atmosferi,
+                        çoğunluğunu üniversite öğrencilerinin ve
                         çalışan kesimin oluşturduğu genç nüfusuyla Eskişehir, ziyaretçilerine klasik bir İç Anadolu
                         şehrinden çok daha fazlasını sunuyor. Günümüzde “öğrenci şehri” olarak anılan Eskişehir, köklü
                         tarihinden gelen gücünü zenginliğini, bir bilim, sanat ve kültür şehri olma vizyonuyla
                         perçinliyor.</p>
-                    <p class="lead">
-                        Eskişehir, geçmişte birçok yeniliğin de öncüsü olmasıyla "ilkler şehri" olarak da
-                        anılıyor.
-                        <ul >
-                            <li>İlk Köy Enstitüsü Eskişehir'de açıldı. (1940)</li>
-                            <li>İlk Türk Otomobili Devrim Eskişehir'de üretildi. (1961)</li>
-                            <li>İlk F-16 motoru ve ilk helikopter parçası üretimi Eskişehir'de gerçekleşti.</li>
-                            <li>İlk Yüksek Hızlı Tren seferi Eskişehir'e yapıldı. (2009)</li>
-                            <li>İlk Türk Dünyası Kültür Başkenti Eskişehir'dir. (2013)</li>
-                            <li>İlk Somut Olmayan Kültürel Miras Başkenti yine Eskişehir'dir. (2013)</li>
-                        </ul>
-                    </p>
+                    <p class="lead"></p>
                 </div>
                 <div class="col-md-5">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                            dy=".3em">500x500</text>
-                    </svg>
-
+                    <img src="images/es3.jpg" width="550" height="350">
                 </div>
             </div>
 
-            <hr class="featurette-divider">
+            <br><br>
+
+            <h2 class="quote">Ünlü araştırma şirketi Numbeo'nun suç oranlarına bakarak hazırladığı dünyanın en
+                güvenli şehirleri raporunda Türkiye’den Eskişehir 10. sırada yer aldı.</h2>
+
+            <br><br><br>
 
             <div class="row featurette">
                 <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Güvenli şehir</h2>
-                    <p class="lead">Ünlü araştırma şirketi Numbeo'nun suç oranlarına bakarak hazırladığı dünyanın en güvenli şehirleri raporunda Türkiye’den Eskişehir 10. sırada yer aldı.</p>
+                    <h2 class="featurette-heading">İlkler Şehri<br></h2>
+                    <p class="lead">
+                        Eskişehir, geçmişte birçok yeniliğin de öncüsü olmasıyla "ilkler şehri" olarak da
+                        anılıyor.
+                    <ul class="ilkler">
+                        <li>İlk Köy Enstitüsü Eskişehir'de açıldı. (1940)</li>
+                        <li>İlk Türk Otomobili Devrim Eskişehir'de üretildi. (1961)</li>
+                        <li>İlk F-16 motoru ve ilk helikopter parçası üretimi Eskişehir'de gerçekleşti.</li>
+                        <li>İlk Yüksek Hızlı Tren seferi Eskişehir'e yapıldı. (2009)</li>
+                        <li>İlk Türk Dünyası Kültür Başkenti Eskişehir'dir. (2013)</li>
+                        <li>İlk Somut Olmayan Kültürel Miras Başkenti yine Eskişehir'dir. (2013)</li>
+                    </ul>
+                    </p>
                 </div>
                 <div class="col-md-5 order-md-1">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                            dy=".3em">500x500</text>
-                    </svg>
-
+                    <img src="images/devrim.jpg" width="550" height="350">
                 </div>
             </div>
 
@@ -390,26 +310,12 @@
                         çevirmeye ne dersiniz?</p>
                 </div>
                 <div class="col-md-5">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                            dy=".3em">500x500</text>
-                    </svg>
-
+                    <img src="images/haller.jpg" width="550" height="350">
                 </div>
             </div>
-
-            <hr class="featurette-divider">
-
-            <!-- /END THE FEATURETTES -->
-
-        </div><!-- /.container -->
+        </div>
 
     </main>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -417,7 +323,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
-
 
 </body>
 
