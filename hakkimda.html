@@ -1,115 +1,139 @@
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <script src="/docs/5.3/assets/js/color-modes.js"></script>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hakkımda</title>
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
-
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-
-  <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
   <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
+    /* eses için eklenen css ler */
+    .slogan {
+      text-align: center;
+      font-style: italic;
     }
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+    .afis {
+      width: 100%;
+    }
+
+    body {
+      padding-top: 6rem;
+      padding-bottom: 3rem;
+      color: #fafafa;
+      background-color: rgb(9, 2, 2);
+      font-family: "Poppins", sans-serif;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+
+    .navbar {
+      font-size: 1.25rem;
+    }
+
+    .dropdown-item {
+      color: #ffffff;
+      font-size: 1.25rem;
+    }
+
+    .dropdown-menu {
+      background-color: #343a40;
+      border-radius: 0;
+    }
+
+    .carousel {
+      margin-bottom: 4rem;
+    }
+
+    .carousel-caption {
+      bottom: 3rem;
+      z-index: 10;
+    }
+
+    .carousel-item {
+      height: 32rem;
+    }
+
+    .carousel-item>img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 32rem;
+    }
+
+    .marketing .col-lg-4 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .marketing h2 {
+      font-weight: 400;
+    }
+
+    .marketing .col-lg-4 p {
+      margin-right: .75rem;
+      margin-left: .75rem;
+    }
+
+    .featurette-divider {
+      margin: 3rem;
+    }
+
+    .featurette-heading {
+      padding: 0;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -.05rem;
+    }
+
+    .ilkler {
+      font-size: 1.25rem;
+    }
+
+    .quote {
+      text-align: center;
+      font-style: italic;
+    }
+
+    @media (min-width: 40em) {
+
+      .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+      }
+
+      .featurette-heading {
+        font-size: 50px;
       }
     }
 
-    .b-example-divider {
-      width: 100%;
-      height: 3rem;
-      background-color: rgba(0, 0, 0, .1);
-      border: solid rgba(0, 0, 0, .15);
-      border-width: 1px 0;
-      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-    }
-
-    .b-example-vr {
-      flex-shrink: 0;
-      width: 1.5rem;
-      height: 100vh;
-    }
-
-    .bi {
-      vertical-align: -.125em;
-      fill: currentColor;
-    }
-
-    .nav-scroller {
-      position: relative;
-      z-index: 2;
-      height: 2.75rem;
-      overflow-y: hidden;
-    }
-
-    .nav-scroller .nav {
-      display: flex;
-      flex-wrap: nowrap;
-      padding-bottom: 1rem;
-      margin-top: -1px;
-      overflow-x: auto;
-      text-align: center;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .btn-bd-primary {
-      --bd-violet-bg: #712cf9;
-      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-      --bs-btn-font-weight: 600;
-      --bs-btn-color: var(--bs-white);
-      --bs-btn-bg: var(--bd-violet-bg);
-      --bs-btn-border-color: var(--bd-violet-bg);
-      --bs-btn-hover-color: var(--bs-white);
-      --bs-btn-hover-bg: #6528e0;
-      --bs-btn-hover-border-color: #6528e0;
-      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-      --bs-btn-active-color: var(--bs-btn-hover-color);
-      --bs-btn-active-bg: #5a23c8;
-      --bs-btn-active-border-color: #5a23c8;
-    }
-
-    .bd-mode-toggle {
-      z-index: 1500;
-    }
-
-    .bd-mode-toggle .dropdown-menu .active .bi {
-      display: block !important;
+    @media (min-width: 62em) {
+      .featurette-heading {
+        margin-top: 7rem;
+      }
     }
   </style>
 
-
-  <!-- Custom styles for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="blog.css" rel="stylesheet">
 </head>
 
 <body>
 
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="hakkimda.html">Hakkımda</a>
+      <div class="container">
+        <a class="navbar-brand active" href="hakkimda.html">Hakkımda</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -117,30 +141,29 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Özgeçmiş</a>
+              <a class="nav-link" aria-current="page" href="ozgecmis.html">Özgeçmiş</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">İlgi Alanlarım</a>
+              <a class="nav-link" href="ilgi.html">İlgi Alanlarım</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="sehrim.html" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
                 Şehrim
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Tarihi</a></li>
-                <li><a class="dropdown-item" href="#">Turizm</a></li>
-                <li><a class="dropdown-item" href="#">Mirasımız Eskişehirspor</a></li>
+                <li><a class="dropdown-item" href="sehrim.html">Memleketim Eskişehir</a></li>
+                <li><a class="dropdown-item" href="eses.html">Mirasımız Eskişehirspor</a></li>
               </ul>
             </li>
           </ul>
 
           <ul class="navbar-nav mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Giriş Yap</a>
+              <a class="nav-link" href="giris.php">Giriş Yap</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">İletişim</a>
+              <a class="nav-link" href="iletisim.html">İletişim</a>
             </li>
           </ul>
         </div>
@@ -148,172 +171,78 @@
     </nav>
   </header>
 
-  <main class="container">
-    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
-      <div class="col-lg-6 px-0">
-        <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
-        <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently
-          about what’s most interesting in this post’s contents.</p>
-        <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>
-      </div>
-    </div>
+  <main>
 
-    <div class="row g-5">
-      <div class="col-md-8">
-        <h3 class="pb-4 mb-4 fst-italic border-bottom">
-          From the Firehose
-        </h3>
+    <div class="container">
 
-        <article class="blog-post">
-          <h2 class="display-5 link-body-emphasis mb-1">Sample blog post</h2>
-          <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
+      <hr class="featurette-divider">
 
-          <p></p>
-          <hr>
-          <p></p>
-          <h2>Baslik</h2>
-          <p>This is a blockquote in action:</p>
-          <blockquote class="blockquote">
-            <p>Quoted text goes here.</p>
-          </blockquote>
-          <p></p>
-          <h3>Example lists</h3>
-          <p>This is an example unordered list:</p>
-          <ul>
-            <li>First list item</li>
-            <li>Second list item with a longer description</li>
-            <li>Third list item to close it out</li>
-          </ul>
-          <p>an ordered list:</p>
-          <ol>
-            <li>First list item</li>
-            <li>Second list item with a longer description</li>
-            <li>Third list item to close it out</li>
-          </ol>
-          <p>And this is a definition list:</p>
-          <h2>Inline HTML elements</h2>
-
-          <ul>
-              <li></li>
-              <li></li>
-
-              
-          </ul>
-          <p>Most of these elements are styled by browsers with few modifications on our part.</p>
-          <h2>Heading</h2>
-          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and
-            show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the
-            demonstration flowing, so be on the lookout for this exact same string of text.</p>
-          <h3>Sub-heading</h3>
-          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and
-            show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the
-            demonstration flowing, so be on the lookout for this exact same string of text.</p>
-          <pre><code>Example code block</code></pre>
-          <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly
-            repetitive body text used throughout.</p>
-        </article>
-
-        <article class="blog-post">
-          <h2 class="display-5 link-body-emphasis mb-1">Another blog post</h2>
-
-          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and
-            show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the
-            demonstration flowing, so be on the lookout for this exact same string of text.</p>
-          <blockquote>
-            <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
-          </blockquote>
-          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and
-            show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the
-            demonstration flowing, so be on the lookout for this exact same string of text.</p>
-          <h3>Example table</h3>
-          <p>And don't forget about tables in these posts:</p>
-
-          <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly
-            repetitive body text used throughout.</p>
-        </article>
-
-        <article class="blog-post">
-          <h2 class="display-5 link-body-emphasis mb-1">New feature</h2>
-          <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
-
-          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and
-            show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the
-            demonstration flowing, so be on the lookout for this exact same string of text.</p>
-          <ul>
-            <li>First list item</li>
-            <li>Second list item with a longer description</li>
-            <li>Third list item to close it out</li>
-          </ul>
-          <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly
-            repetitive body text used throughout.</p>
-        </article>
-
-        <nav class="blog-pagination" aria-label="Pagination">
-          <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
-          <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
-        </nav>
-
-      </div>
-
-      <div class="col-md-4">
-        <div class="position-sticky" style="top: 2rem;">
-          <div class="p-4 mb-3 bg-body-tertiary rounded">
-            <h4 class="fst-italic">About</h4>
-            <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers,
-              content, or something else entirely. Totally up to you.</p>
-          </div>
-
-          <div>
-            <h4 class="fst-italic">Recent posts</h4>
-            <ul class="list-unstyled">
-              <li>
-                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                  href="#">
-                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="#777" />
-                  </svg>
-                  <div class="col-lg-8">
-                    <h6 class="mb-0">Example blog post title</h6>
-                    <small class="text-body-secondary">January 15, 2024</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                  href="#">
-                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="#777" />
-                  </svg>
-                  <div class="col-lg-8">
-                    <h6 class="mb-0">This is another blog post title</h6>
-                    <small class="text-body-secondary">January 14, 2024</small>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="p-4">
-            <h4 class="fst-italic">Archives</h4>
-            <ol class="list-unstyled mb-0">
-              <li><a href="#">March 2021</a></li>
-              <li><a href="#">February 2021</a></li>
-            </ol>
-          </div>
-
-          <div class="p-4">
-            <h4 class="fst-italic">Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-            </ol>
-          </div>
+      <div class="row featurette">
+        <div class="col-md-12">
+          <p class="lead">Merhaba! Ben İrem Güzel. 22 yaşındayım. Kişisel websiteme hoş geldiniz. Sizlere biraz kendimi
+            ve memleketimi tanıtacağım. Biraz da ilgi alanlarımdan bahsedeceğim. </p>
         </div>
       </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">İrem Güzel<br></h2>
+          <p class="lead">8 Ocak 2002'de memleketim Eskişehir'de evin ilk çocuğu olarak dünyaya geldim.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="images/eses.jpeg" width="550" height="350">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Eğitim<br></h2>
+          <p class="lead">
+            8. sınıf ve liseyi TED Eskişehir Özel Anadolu Lisesinde okudum. Şimdi lisans eğitimime Sakarya
+            Üniversitesinde devam etmekteyim. Uçsuz bucaksız bir alanda çalışıyor olmak, öğrendiklerimle ufkum açılırken
+            öğreneceğim daha çok şey olması beni heyecanlandırıyor. Zor bir bölüm okuyor olsam da oldukça severek
+            okuduğumu hiç tereddütsüz şekilde söyleyebilirim.
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="images/e26.jpg" width="550" height="350" alt="">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <h2 class="featurette-heading">İlgi Alanlarım<br></h2>
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Fotoğrafçılık<br></h2>
+          <p class="lead">Fotoğraf çekmeyi çok seviyorum. Sanki o anı bir kapsül içine depolayabilmişim gibi
+            hissettiriyor. Duyular ve hatıralarımız aracılığıyla zamanda yolculuğa açılan bir yol gibi geliyor. Unutmak
+            istemeyeceğim kadar güzel anıları anımsamama yardımcı oluyor. İleride fotoğrafçılık alanında profesyonel
+            şekilde kendimi eğitmek isterim.</p>
+        </div>
+        <div class="col-md-5">
+
+          <img src="images/e1.jpg" width="550" height="350" alt="Eskişehirspor">
+
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
     </div>
+
+    <div class="container">
+      <div class="row featurette">
+        <h2 class="slogan">"Üç puandır formandaki ter, sonuna kadar mücadele edin yeter!"</h2>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
 
   </main>
 
