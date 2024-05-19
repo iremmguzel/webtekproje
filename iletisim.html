@@ -13,21 +13,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
   <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-
     body {
       font-family: "Poppins", sans-serif;
       padding-top: 5rem;
@@ -100,6 +88,7 @@
 
     h2 {
       margin-bottom: 0;
+      padding-bottom: 0.5rem;
       font-weight: 600;
       color: #343a40;
     }
@@ -110,10 +99,60 @@
 
     .form-group.radio-group {
       margin-top: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     .subject {
       margin-bottom: 0;
+    }
+
+    select.form-control {
+      appearance: none;
+      padding: 0.4rem;
+      font-size: 1rem;
+      color: #5a5a5a;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+      background-color: #fff;
+    }
+
+    select.form-control:focus {
+      border-color: #80bdff;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    .custom-checkbox .form-check-input {
+      appearance: none;
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+      background-color: #fff;
+      display: inline-block;
+      position: relative;
+    }
+
+    .custom-checkbox .form-check-input:checked {
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .form-group-inline {
+      display: flex;
+      align-items: flex-end;
+      gap: 1rem;
+    }
+
+    .error-message {
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      display: none;
     }
   </style>
 
@@ -132,30 +171,29 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Özgeçmiş</a>
+              <a class="nav-link" aria-current="page" href="ozgecmis.html">Özgeçmiş</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">İlgi Alanlarım</a>
+              <a class="nav-link" href="ilgi.html">İlgi Alanlarım</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="sehrim.html" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
                 Şehrim
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Tarihi</a></li>
-                <li><a class="dropdown-item" href="#">Turizm</a></li>
-                <li><a class="dropdown-item" href="#">Mirasımız Eskişehirspor</a></li>
+                <li><a class="dropdown-item" href="sehrim.html">Memleketim Eskişehir</a></li>
+                <li><a class="dropdown-item" href="eses.html">Mirasımız Eskişehirspor</a></li>
               </ul>
             </li>
           </ul>
 
           <ul class="navbar-nav mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Giriş Yap</a>
+              <a class="nav-link" href="giris.php">Giriş Yap</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">İletişim</a>
+              <a class="nav-link active" href="iletisim.html">İletişim</a>
             </li>
           </ul>
         </div>
@@ -165,45 +203,70 @@
 
   <main>
     <div class="container">
-      <form>
+      <div id="error-message" class="error-message">Lütfen tüm alanları doldurunuz ve e-posta adresinizi doğru formatta
+        giriniz.</div>
+      <form id="contact-form" action="contact.php" method="post" enctype="multipart/form-data">
         <div class="form-group col-md-12">
-          <h2>İletişim</h2> <br>
+          <h2>İletişim</h2>
         </div>
-        <div class="form-group col-md-6">
-          <label for="fname" class="form-label">İsminiz</label>
-          <input type="text" class="form-control" placeholder="İsminiz" aria-label="First name">
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="fname" class="form-label">İsminiz</label>
+            <input type="text" class="form-control" v-model="formData.fname" name="fname" id="fname"
+              placeholder="İsminiz" aria-label="First name">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="lname" class="form-label">Soyisminiz</label>
+            <input type="text" class="form-control" v-model="formData.lname" name="lname" id="lname"
+              placeholder="Soyisminiz" aria-label="Last name">
+          </div>
         </div>
-        <div class="form-group col-md-6">
-          <label for="lname" class="form-label">Soyisminiz</label>
-          <input type="text" class="form-control" placeholder="Soyisminiz" aria-label="Last name">
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="email" class="form-label">E-mail adresiniz</label>
+            <input type="email" class="form-control" v-model="formData.email" name="email" id="email"
+              placeholder="name@example.com">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="country" class="form-label">Ülkeniz:</label>
+            <select id="country" name="country" class="form-control">
+              <option value="turkey">Türkiye</option>
+              <option value="usa">ABD</option>
+              <option value="germany">Almanya</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label class="form-label subject">İletinin konusu</label>
+            <div class="form-group radio-group">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                value="flexRadioDefault1" checked>
+              <label class="form-check-label" for="flexRadioDefault1">Talep</label>
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                value="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2">Öneri</label>
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3"
+                value="flexRadioDefault3">
+              <label class="form-check-label" for="flexRadioDefault3">Şikayet</label>
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="additional">Belge Eki Yükleyin:</label>
+            <input type="file" id="additional" name="additional">
+          </div>
         </div>
         <div class="form-group col-md-12">
-          <label for="exampleFormControlInput1" class="form-label">E-mail adresiniz</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <label for="message" class="form-label">Mesajınız</label>
+          <textarea class="form-control" v-model="formData.message" name="message" id="message" rows="4"></textarea>
         </div>
-        <div class="form-group col-md-12">
-          <label for="fname" class="form-label subject">İletinin konusu</label>
-        </div>
-        <div class="form-group col-md-12 radio-group">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-          <label class="form-check-label" for="flexRadioDefault2">
-            Talep
-          </label>
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-          <label class="form-check-label" for="flexRadioDefault1">
-            Öneri
-          </label>
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-          <label class="form-check-label" for="flexRadioDefault1">
-            Şikayet
-          </label>
-        </div>
-        <div class="form-group col-md-12">
-          <label for="exampleFormControlTextarea1" class="form-label">Mesajınız</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <div class="form-group col-md-12 custom-checkbox">
+          <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
+          <label for="newsletter" class="form-check-label">Mesajımla ilgili geri dönüş maili almak istiyorum.</label>
         </div>
         <div class="form-group col-md-12">
           <button type="reset" class="btn btn-primary">Temizle</button>
+          <button type="button" class="btn btn-primary" @click="submitForm">Denetle</button>
           <button type="submit" class="btn btn-primary">Gönder</button>
         </div>
       </form>
@@ -219,6 +282,75 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
     crossorigin="anonymous"></script>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      var isValid = true;
+      var errorMessage = document.getElementById('error-message');
+
+      var fname = document.getElementById('fname').value.trim();
+      var lname = document.getElementById('lname').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var message = document.getElementById('message').value.trim();
+
+      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+      if (!fname || !lname || !email || !message) {
+        isValid = false;
+        errorMessage.textContent = 'Lütfen tüm alanları doldurunuz.';
+      } else if (!emailPattern.test(email)) {
+        isValid = false;
+        errorMessage.textContent = 'Lütfen geçerli bir e-posta adresi giriniz.';
+      }
+
+      if (!isValid) {
+        errorMessage.style.display = 'block';
+        event.preventDefault();
+        window.scrollTo(0, 0);
+      } else {
+        errorMessage.style.display = 'none';
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        formData: {
+          fname: '',
+          lname: '',
+          email: '',
+          message: ''
+        },
+        errorMessage: ''
+      },
+      methods: {
+        validateForm() {
+          this.errorMessage = '';
+          if (!this.formData.fname || !this.formData.lname || !this.formData.email || !this.formData.message) {
+            this.errorMessage = 'Lütfen tüm alanları doldurunuz.';
+            return false;
+          }
+          // E-posta formatını kontrol etmek için regex kullanabilirsiniz
+          const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+          if (!emailPattern.test(this.formData.email)) {
+            this.errorMessage = 'Lütfen geçerli bir e-posta adresi giriniz.';
+            return false;
+          }
+          return true;
+        },
+        submitForm() {
+          if (this.validateForm()) {
+            // Formu gönder
+            document.getElementById('contact-form').submit();
+          }
+        }
+      }
+    });
+  </script>
 
 </body>
 
