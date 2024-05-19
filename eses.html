@@ -1,65 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İrem Güzel kişisel websitesi</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eskişehirspor</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <style>
+        /* eses için eklenen css ler */
+        .slogan {
+            text-align: center;
+            font-style: italic;
+        }
+
+        .afis {
+            width: 100%;
+        }
+
+        body {
+            padding-top: 6rem;
+            padding-bottom: 3rem;
+            color: #fafafa;
+            background-color: rgb(9, 2, 2);
+            font-family: "Poppins", sans-serif;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+
+        .navbar {
+            font-size: 1.25rem;
+        }
+
+        .dropdown-item {
+            color: #ffffff;
+            font-size: 1.25rem;
+        }
+
+        .dropdown-menu {
+            background-color: #343a40;
+            border-radius: 0;
+        }
+
+        .carousel {
+            margin-bottom: 4rem;
+        }
+
+        .carousel-caption {
+            bottom: 3rem;
+            z-index: 10;
+        }
+
+        .carousel-item {
+            height: 32rem;
+        }
+
+        .carousel-item>img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            height: 32rem;
+        }
+
+        .marketing .col-lg-4 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .marketing h2 {
+            font-weight: 400;
+        }
+
+        .marketing .col-lg-4 p {
+            margin-right: .75rem;
+            margin-left: .75rem;
+        }
+
+        .featurette-divider {
+            margin: 3rem;
+        }
+
+        .featurette-heading {
+            padding: 0;
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: -.05rem;
+        }
+
+        .ilkler {
+            font-size: 1.25rem;
+        }
+
+        .quote {
+            text-align: center;
+            font-style: italic;
+        }
+
+        @media (min-width: 40em) {
+
+            .carousel-caption p {
+                margin-bottom: 1.25rem;
+                font-size: 1.25rem;
+                line-height: 1.4;
+            }
+
+            .featurette-heading {
+                font-size: 50px;
+            }
+        }
+
+        @media (min-width: 62em) {
+            .featurette-heading {
+                margin-top: 7rem;
+            }
+        }
+    </style>
+
 </head>
+
 <body>
 
-<div class="topnav" id="myTopnav">
-  <a href="hakkimda.html">Hakkımda</a>
-  <a href="ozgecmis.html">Özgeçmiş</a>
-  <a href="ilgi.html">İlgi Alanlarım</a>
-  <div class="dropdown">
-    <button class="dropbtn" style="background-color: #04AA6D;
-    color: white;">Şehrim 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Tarihi</a>
-      <a href="#">Turizm Değerleri</a>
-      <a href="eses.html">Mirasımız Eskişehirspor</a>
-    </div>
-  </div>
-  <a href="iletisim.html" style="float: right;">İletişim</a>
-  <a href="giris.html" style="float: right;">Giriş Yap</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="hakkimda.html">Hakkımda</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="ozgecmis.html">Özgeçmiş</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ilgi.html">İlgi Alanlarım</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="sehrim.html" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Şehrim
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="sehrim.html">Memleketim Eskişehir</a></li>
+                                <li><a class="dropdown-item" href="eses.html">Mirasımız Eskişehirspor</a></li>
+                            </ul>
+                        </li>
+                    </ul>
 
-<div>
-  <img src="f4.jpg" alt=""  class="imgf">
-</div>
+                    <ul class="navbar-nav mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="giris.php">Giriş Yap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="iletisim.html">İletişim</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<div>
-  <img src="e1.jpg" alt=""  class="imgesk">
-</div>
+    <main>
 
-<br>
+        <div class="container">
 
-<div style="padding-left:16px">
-  <h1 class="slogan">"Üç puandır formandaki ter, sonuna kadar mücadele edin yeter!"</h1>
-</div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <img src="images/f4.jpg" alt="">
+            </div>
+            <hr class="featurette-divider">
 
-<br>
+            <div class="row featurette">
+                <div class="col-md-12">
+                    <p class="lead">Anadolu efsanesi Eskişehirspor... Halk arasında ESES olarak kısaltılan, bir dönem
+                        Süper Lig'de üst sıralarda mücadele etmiş ve şu anda Bölgesel Amatör Lig'de yer alan Türk spor
+                        kulübüdür. Toplam 6 kupa ile Türkiye'nin en çok kupaya sahip 5. takımı konumundadır.</p>
+                </div>
+            </div>
 
-<iframe width="100%" height="650" style="margin: 0 auto;" src="https://www.youtube.com/embed/aFMoqaPMA7Q?si=NA3LMlhB4CddEBbt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <hr class="featurette-divider">
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += "responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Eskişehirspor<br></h2>
+                    <p class="lead">Eskişehirspor 1965 yılında kurulmuş ve başkanlığına Aziz Bolel getirilmiştir.
+                        Takımın renkleri
+                        siyah-kırmızıdır. Eskişehirspor
+                        kuruluş yıllarından beri tribünleri inleten "ES ES ES Kİ Kİ Kİ ESKİ ESKİ ES!" meşhur
+                        tezahüratına ithafen
+                        halk arasında <b>ESES</b> olarak kısaltılır.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="images/eses.jpeg" width="550" height="350">
 
-<script src="js/bootstrap.bundle.min.js"></script>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Eskişehirspor'un tarihi<br></h2>
+                    <p class="lead">
+                        2007-2008 sezonunda 1. Lig play-off şampiyonu olmuş ve Süper Lig'e
+                        çıkmıştır. 2011-2012 sezonunun 2. devresinde Ersun Yanal yönteminde 4. tamamlayarak UEFA Avrupa
+                        Ligi
+                        elemelerine katılma hakkı kazanmıştır. 2015-2016 sezonunu Süper Lig'i 16. tamamlayaran
+                        Eskişehirspor 1.
+                        Lig'e düşmüştür. 2020-2021 sezonuna kadar 1. Lig'de mücadele etmiştir. 2020-2021 sezonunda 1.
+                        Lig'den 2.
+                        Lig'e, 2021-2022 sezonunda 2. Lig'den 3. Lig'e, 2022-2023 sezonunda Bölgesel Amatör Lige
+                        düşmüştür.
+                    </p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img src="images/e26.jpg" width="550" height="350" alt="">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Eskişehirspor<br></h2>
+                    <p class="lead">Eskişehirspor 1965 yılında kurulmuş ve başkanlığına Aziz Bolel getirilmiştir.
+                        Takımın renkleri
+                        siyah-kırmızıdır. Eskişehirspor
+                        kuruluş yıllarından beri tribünleri inleten "ES ES ES Kİ Kİ Kİ ESKİ ESKİ ES!" meşhur
+                        tezahüratına ithafen
+                        halk arasında ESES olarak kısaltılır.</p>
+                </div>
+                <div class="col-md-5">
+
+                    <img src="images/e1.jpg" width="550" height="350" alt="Eskişehirspor">
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+        </div>
+
+        <div class="container">
+            <div class="row featurette">
+                <h2 class="slogan">"Üç puandır formandaki ter, sonuna kadar mücadele edin yeter!"</h2>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="container">
+            <div class="row featurette">
+
+                <iframe width="100%" height="650" style="margin: 0 auto;"
+                    src="https://www.youtube.com/embed/aFMoqaPMA7Q?si=NA3LMlhB4CddEBbt" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            </div>
+
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="container">
+            <div class="row featurette">
+
+                <p class="lead">Eskişehirspor taraftarlarının 2006 gönüllülük esasıyla oluşturduğu "Bando Es-Es", zor
+                    günler geçiren takımlarının yeniden ayağa kalkması için her maç tribündeki yerini alıyor.
+                    Tribünde küfürsüz bir ortam oluşturup maçların şölen havasında geçmesini sağlamak amacıyla 15 yıl
+                    önce çeşitli meslek gruplarından taraftarlarca kurulan grup, takımın iç saha maçlarında tribünden
+                    destek veriyor.
+                    Türkiye Futbol Federasyonunun (TFF) davetlisi olarak Fransa'da düzenlenen 2016 Avrupa Futbol
+                    Şampiyonası'nda (EURO 2016) milli takımı maçlarda destekleyen Bando Es-Es, ay-yıldızlıların
+                    Eskişehir ve Konya'daki bazı maçlarında da marşlarıyla taraftara eşlik etti.
+                    Türkiye A Milli Hentbol Takımlarının Eskişehir'deki karşılaşmalarında sporcuları ve taraftarı
+                    coşturan grup, kentteki hentbol ve voleybol takımlarının da ateşleyici gücü oluyor.
+                    Bando Es-Es'in Ay-yıldızlılar için "Biz bitti demeden bitmez" adlı özel bestesi de bulunuyor.
+                    Taraftar Eskişehirspor'un durumu nedeniyle hüzünlü de olsa
+                    takımlarını desteklemekten vazgeçmiyor.
+                    Eskişehirspor'un Süper Lig'de mücadele ettiği sezonlarda rakiplerin çekinerek bu
+                    deplasmana geldiğini ifade ediyorlar.</p>
+
+            </div>
+
+        </div>
+
+        <hr class="featurette-divider">
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>
